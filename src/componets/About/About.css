@@ -1,0 +1,203 @@
+.about__container{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    z-index: 1;
+}
+.about{
+    position: relative;
+    overflow: hidden;
+}
+.about__data{
+    flex-basis: 60%;
+    padding: 1.875rem;
+    background-color: var(--container-color);
+    box-shadow: var(--shadows);
+    border-radius: var(--border-radius);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.875rem;
+    align-items: flex-start;
+    position: relative;
+}
+.about__data::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 15px solid transparent;
+    position: absolute;
+    left: 0.93rem;
+    top: 20%;
+}
+.about__decription{
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+.icons__skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-basis: 30%;
+    position: relative;
+}
+.skills__icons{
+    font-size: 5rem;
+    flex-basis: 40%;
+    position: relative;
+}
+
+.popover_content{
+    position: absolute;
+    top: 0;
+    left: 5rem;
+    font-size: 1rem;
+    color: var(--title-color);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--container-color);
+    padding: 1rem;
+    width: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+.popover_content::before{
+    position: absolute;
+    content: "";
+    left: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent var(--container-color)
+}
+.skills__icons:hover .popover_content{
+    opacity: 1;
+    visibility: visible;
+}
+.skils_bar-ap{
+    position: relative;
+    height: 1.5rem;
+    background-color: var(--body-color);
+    width: 12rem;
+    margin:1rem;
+    border:1px solid transparent;
+    transition: 3s;
+}
+.skills__icons:hover .skils_bar-fill{
+    transform-origin: left;
+    animation: forwa 1s cubic-bezier(1,0,0.5, 1) forwards;
+    transform: scaleX(0);
+}
+.skils_bar-fill{
+   height: 100%;
+   position: absolute;
+   top: 0;
+   object-fit: cover;
+   background-color: var(--primary);
+    width: 95%;
+}
+.illustra{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    background-color:var(--primary);
+    width: 90%;
+}
+.skills__icons2:hover .illustra{
+    transform-origin: left;
+    animation: forwa 1s cubic-bezier(1,0,0.5, 1) forwards;
+    transform: scaleX(0);
+}
+.premiem{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    background-color: var(--primary);
+    width: 85%;
+}
+.skills__icons3:hover .premiem{
+    transform-origin: left;
+    animation: forwa 1s cubic-bezier(1,0,0.5, 1) forwards;
+    transform: scaleX(0);
+}
+.skills__icons4:hover .skils_bar-fill4{
+    transform-origin: left;
+    animation: forwa 1s cubic-bezier(1,0,0.5, 1) forwards;
+    transform: scaleX(0);
+}
+.skils_bar-fill4{
+   height: 100%;
+   position: absolute;
+   top: 0;
+   object-fit: cover;
+   background-color: var(--primary);
+   width: 75%;
+}
+
+
+@keyframes forwa {
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .about__container{
+        grid-template-columns: 750px;
+        justify-content: center;
+        row-gap: 1.825rem;
+    }
+    .about__data{
+        flex-basis: 86%;
+    }
+    .about__data::before{
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+        left: 49%;
+        top: -20px;
+
+    }
+    .skills__icons{
+        flex-basis: 45%;
+    }
+
+}
+@media screen and (max-width: 750px) {
+
+    .about__container{
+        grid-template-columns: 310px;
+    }
+    .icons__skills{
+        flex-basis: 75%;
+        position: relative;
+    }
+    .skills__icons{
+        font-size: 3rem;
+        flex-basis: 25%;
+        position: static;
+    }
+    .popover_content{
+        top: 3.5rem;
+        left: 1rem;
+    }
+    .popover_content::before{
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+        left: 49%;
+        top: -7px;
+    }
+    .first::before{
+        left: 2%;
+    }
+    .seconde::before{
+        left: 20%;
+    }
+    .forth::before{
+        left: 75%;
+    }
+
+}

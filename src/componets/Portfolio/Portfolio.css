@@ -1,0 +1,120 @@
+.work{
+    position: relative;
+    overflow: hidden;
+}
+.work__filter{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1.875rem;
+    margin-bottom: 2.5rem;
+}
+.work__item{
+    cursor: pointer;
+    font-weight: var(--bold-font);
+    transition: .3s;
+
+}
+.work__item:hover{
+    color: var(--primary);
+}
+.work__container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+}
+.work__card{
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+.work__img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+.work__mask{
+    background: #6c6ce5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+} 
+.work__card:hover .work__mask{
+    opacity: 0.9;
+}
+.work__category{
+    color: #fff;
+    background-color: var(--primary);
+    border-bottom-left-radius: 0.98rem;
+    border-bottom-right-radius: 0.98rem;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    font-size: var(--small-font-size);
+    display: inline-block;
+    padding: 0.19rem 0.625rem;
+    transform: translateY(-40px);
+    transition: .3s;
+
+}
+.work__title{
+    color: #fff;
+    font-size: var(--h3-font-size);
+    position: absolute;
+    margin: 0 0.98rem;
+    padding: 0 1.25px;
+    top: 3.75rem;
+    transform: translateY(30px);
+    transition: .3s;
+    opacity: 0;
+
+}
+.work__btn{
+    color: #fff;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    display: block;
+    font-size: var(--h3-font-size);
+    background-color: #ffd15c;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    opacity: 0;
+    transition: .3s;
+}
+.work__card:hover .work__category,
+.work__card:hover .work__title,
+.work__card:hover .work__btn{
+    opacity: 1;
+    transform: translateY(0);
+}
+@media screen and (max-width: 1024px){
+    .work__filter{
+        justify-content: center;
+    } 
+    .work__container{
+        grid-template-columns: repeat(2, 330px);
+        justify-content: center;
+        row-gap: 1.825px;
+    }   
+}
+@media screen and (max-width: 750px){
+    .work__container{
+        grid-template-columns: 310px;
+        row-gap: 1.825px;
+    }   
+    .work__filter{
+        column-gap: 0.75rem;
+    }
+    .work__card{
+        margin-bottom: 1.825rem;
+    }
+}

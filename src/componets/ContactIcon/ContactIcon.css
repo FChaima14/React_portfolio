@@ -1,0 +1,28 @@
+.home__socials{
+    display: flex;
+    column-gap: 1.75rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+}
+.home__socilas-link{
+    color: var(--title-color);
+    font-size: 1.5rem;
+    transition: .3s;
+}
+.home__socilas-link:hover{
+    color: var(--primary);
+}
+.logo_container{
+    display: flex;
+    object-fit: cover;
+    height: 1.8rem;
+    width: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .7rem;
+}
+.logo_image{
+    height: 100%;
+    width: 100%;
+}
